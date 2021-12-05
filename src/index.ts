@@ -10,7 +10,9 @@ export const run = async () => {
 
   // now we gather a list of all the flag names that are listed if there are
   // any and check the code base supplied for any instances of them
-  const instancesOfLaunchedFlags = scanForLaunchedFlagsInCode(launchedFlags);
+  const instancesOfLaunchedFlags = await scanForLaunchedFlagsInCode(
+    launchedFlags,
+  );
 
   if (instancesOfLaunchedFlags) {
     throw new Error(
