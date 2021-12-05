@@ -1,6 +1,6 @@
 {
   "name": "@jigglytech/launch-darkly-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Some tools for launch darkly",
   "engines": {
     "node": ">= 14 <17"
@@ -9,7 +9,7 @@
     "ldtools": "./dist/src/cli.js"
   },
   "files": [
-    "./dist/**"
+    "dist/**"
   ],
   "devDependencies": {
     "@types/jest": "~27.0.2",
