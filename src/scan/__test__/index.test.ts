@@ -30,8 +30,8 @@ describe('UNIT | scan', () => {
   });
 
   it('should find instances of flags in code files', async () => {
-    process.env.LAUNCH_DARKLY_SOURCE_FILES_FOLDER = './withCodeInstance';
-    process.env.LAUNCH_DARKLY_SOURCE_FILES_PATTERN = '.js';
+    process.env.LAUNCH_DARKLY_TOOLS_SOURCE_FILES_FOLDER = './withCodeInstance';
+    process.env.LAUNCH_DARKLY_TOOLS_SOURCE_FILES_PATTERN = '.js';
 
     const results = await scanForLaunchedFlagsInCode({
       items: [
@@ -61,8 +61,9 @@ describe('UNIT | scan', () => {
   });
 
   it('should not flag instances when there are none in the code base', async () => {
-    process.env.LAUNCH_DARKLY_SOURCE_FILES_FOLDER = './withNoCodeInstance';
-    process.env.LAUNCH_DARKLY_SOURCE_FILES_PATTERN = '.js';
+    process.env.LAUNCH_DARKLY_TOOLS_SOURCE_FILES_FOLDER =
+      './withNoCodeInstance';
+    process.env.LAUNCH_DARKLY_TOOLS_SOURCE_FILES_PATTERN = '.js';
 
     const results = await scanForLaunchedFlagsInCode({
       items: [

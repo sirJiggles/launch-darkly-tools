@@ -4,11 +4,11 @@ import { LDResponse } from '../types';
 // This function will return all the flags that are launched in your account
 export const getLaunchedFlags = async () => {
   const resp = await fetch(
-    `https://app.launchdarkly.com/api/v2/flags/${process.env.LAUNCH_DARKLY_PROJECT}?filter=filterEnv:${process.env.LAUNCH_DARKLY_ENV},status:launched`,
+    `https://app.launchdarkly.com/api/v2/flags/${process.env.LAUNCH_DARKLY_TOOLS_PROJECT}?filter=filterEnv:${process.env.LAUNCH_DARKLY_TOOLS_ENV},status:launched`,
     {
       method: 'GET',
       headers: {
-        Authorization: process.env.LAUNCH_DARKLY_API_KEY,
+        Authorization: process.env.LAUNCH_DARKLY_TOOLS_API_KEY,
       },
     },
   );

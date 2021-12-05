@@ -5,19 +5,19 @@ import { ErrorMessage } from '../types';
 dotenv.config();
 
 export const validateConfiguration = () => {
-  if (!process.env.LAUNCH_DARKLY_API_KEY) {
+  if (!process.env.LAUNCH_DARKLY_TOOLS_API_KEY) {
     throw new Error(ErrorMessage.noLaunchDarklyAPIKey);
   }
-  if (!process.env.LAUNCH_DARKLY_PROJECT) {
+  if (!process.env.LAUNCH_DARKLY_TOOLS_PROJECT) {
     throw new Error(ErrorMessage.noLaunchDarklyProject);
   }
-  if (!process.env.LAUNCH_DARKLY_ENV) {
+  if (!process.env.LAUNCH_DARKLY_TOOLS_ENV) {
     throw new Error(ErrorMessage.noEnvironment);
   }
-  if (!process.env.LAUNCH_DARKLY_SOURCE_FILES_FOLDER) {
+  if (!process.env.LAUNCH_DARKLY_TOOLS_SOURCE_FILES_FOLDER) {
     throw new Error(ErrorMessage.noSourceFilesFolder);
   }
-  if (!process.env.LAUNCH_DARKLY_SOURCE_FILES_PATTERN) {
+  if (!process.env.LAUNCH_DARKLY_TOOLS_SOURCE_FILES_PATTERN) {
     throw new Error(ErrorMessage.noSourceFilesPattern);
   }
 };

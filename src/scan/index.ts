@@ -3,8 +3,8 @@ import * as findInFiles from 'find-in-files';
 
 export const scanForLaunchedFlagsInCode = async (launchedFlags: LDResponse) => {
   const {
-    LAUNCH_DARKLY_SOURCE_FILES_FOLDER,
-    LAUNCH_DARKLY_SOURCE_FILES_PATTERN,
+    LAUNCH_DARKLY_TOOLS_SOURCE_FILES_FOLDER,
+    LAUNCH_DARKLY_TOOLS_SOURCE_FILES_PATTERN,
   } = process.env;
 
   // make an or regex to get all flags in one pass
@@ -14,8 +14,8 @@ export const scanForLaunchedFlagsInCode = async (launchedFlags: LDResponse) => {
 
   const foundFlags: FoundLaunchedFlags = await findInFiles.find(
     { term: allLaunchedFlags, flags: 'igm' },
-    LAUNCH_DARKLY_SOURCE_FILES_FOLDER,
-    LAUNCH_DARKLY_SOURCE_FILES_PATTERN,
+    LAUNCH_DARKLY_TOOLS_SOURCE_FILES_FOLDER,
+    LAUNCH_DARKLY_TOOLS_SOURCE_FILES_PATTERN,
   );
 
   // the format provided by the plugin is mental, make something
