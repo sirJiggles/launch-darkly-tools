@@ -1,9 +1,9 @@
 {
   "name": "@jigglytech/launch-darkly-tools",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Some tools for launch darkly",
   "engines": {
-    "node": ">= 16.13 <17"
+    "node": ">= 14 <17"
   },
   "bin": {
     "ldtools": "./dist/src/cli.js"

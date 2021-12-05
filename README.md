@@ -30,8 +30,8 @@ The idea would be that you run this script either in something like a git action
 
 On Passing:
 
-![passing](./assets/passing.png)
+![passing](https://github.com/sirJiggles/launch-darkly-tools/blob/main/assets/passing.png?raw=true)
 
 On Failing:
 
-![passing](./assets/failing.png)
+![passing](https://github.com/sirJiggles/launch-darkly-tools/blob/main/assets/failing.png?raw=true)
