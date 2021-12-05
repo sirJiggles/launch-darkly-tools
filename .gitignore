@@ -10,7 +10,7 @@ node_modules/
 coverage
 
 # Transpiled files
-build/
+dist/
 
 # VS Code
 .vscode
@@ -27,3 +27,9 @@ build/
 
 # Misc
 .DS_Store
+
+# Env files
+.env
+
+# Some test files while working on the API
+result.json

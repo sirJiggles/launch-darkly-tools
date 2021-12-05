@@ -1,10 +1,16 @@
 {
-  "name": "node-typescript-boilerplate",
+  "name": "@jigglytech/launch-darkly-tools",
   "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "description": "Some tools for launch darkly",
   "engines": {
     "node": ">= 16.13 <17"
   },
+  "bin": {
+    "ldtools": "./dist/src/cli.js"
+  },
+  "files": [
+    "./dist/**"
+  ],
   "devDependencies": {
     "@types/jest": "~27.0.2",
     "@types/node": "~16.11.6",
@@ -21,7 +27,7 @@
     "typescript": "~4.4.4"
   },
   "scripts": {
-    "start": "node build/src/main.js",
+    "start": "node dist/src/cli.js",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.release.json",
@@ -30,9 +36,14 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
+  "author": "Gareth Fuller <gareth126@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "find-in-files": "^0.5.0",
+    "mock-fs": "^5.1.2",
+    "node-fetch": "^2.6.6",
     "tslib": "~2.3.1"
   },
   "volta": {
