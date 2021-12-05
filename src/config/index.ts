@@ -14,7 +14,7 @@ export const validateConfiguration = () => {
   if (!process.env.LAUNCH_DARKLY_ENV) {
     throw new Error(ErrorMessage.noEnvironment);
   }
-  if (!process.env.SCAN_PATH) {
-    throw new Error(ErrorMessage.noScanPathProvided);
+  if (!process.env.LAUNCH_DARKLY_SOURCE_FILES) {
+    throw new Error(ErrorMessage.noSourceFilesPath);
   }
 };
