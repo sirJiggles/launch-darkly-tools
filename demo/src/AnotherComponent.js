@@ -1,3 +1,3 @@
 const anotherComponent = () => {
-  const { flagNotLaunched } = useSomeHook();
+  const { auditRequestCreationProductSuggestionsEnabled } = useSomeHook();
 };
